@@ -1,0 +1,138 @@
+{
+    "__id": "01944b0a-ae46-703a-818e-77e2e93d525e",
+    "kind": "export_configuration",
+    "steps": {
+        "appViews": {
+            "label": "appViews",
+            "status": "new",
+            "error": ""
+        },
+        "babysitter": {
+            "label": "babysitter",
+            "status": "new",
+            "error": ""
+        },
+        "contractor": {
+            "label": "contractor",
+            "status": "new",
+            "error": ""
+        },
+        "crm": {
+            "label": "crm",
+            "status": "new",
+            "error": ""
+        },
+        "docflow": {
+            "label": "docflow",
+            "status": "new",
+            "error": ""
+        },
+        "event-bus": {
+            "label": "event-bus",
+            "status": "new",
+            "error": ""
+        },
+        "exchangeSrv": {
+            "label": "exchangeSrv",
+            "status": "new",
+            "error": ""
+        },
+        "extensions": {
+            "label": "extensions",
+            "status": "new",
+            "error": ""
+        },
+        "external_applications": {
+            "label": "external_applications",
+            "status": "new",
+            "error": ""
+        },
+        "groups": {
+            "label": "groups",
+            "status": "new",
+            "error": ""
+        },
+        "localizer": {
+            "label": "localizer",
+            "status": "new",
+            "error": ""
+        },
+        "oauth2": {
+            "label": "oauth2",
+            "status": "new",
+            "error": ""
+        },
+        "orgstruct": {
+            "label": "orgstruct",
+            "status": "new",
+            "error": ""
+        },
+        "pages": {
+            "label": "pages",
+            "status": "new",
+            "error": ""
+        },
+        "permissionsSettings": {
+            "label": "permissionsSettings",
+            "status": "new",
+            "error": ""
+        },
+        "portal": {
+            "label": "portal",
+            "status": "new",
+            "error": ""
+        },
+        "processor": {
+            "label": "processor",
+            "status": "new",
+            "error": ""
+        },
+        "products": {
+            "label": "products",
+            "status": "new",
+            "error": ""
+        },
+        "projects": {
+            "label": "projects",
+            "status": "new",
+            "error": ""
+        },
+        "reporter": {
+            "label": "reporter",
+            "status": "new",
+            "error": ""
+        },
+        "serials": {
+            "label": "serials",
+            "status": "new",
+            "error": ""
+        },
+        "settings": {
+            "label": "settings",
+            "status": "new",
+            "error": ""
+        },
+        "templates": {
+            "label": "templates",
+            "status": "error",
+            "error": "rpc error: code = NotFound desc = add doctemplate \"Шаблон счета\" from namespace \"_transactions._outgoing_invoices\" to export: get file body by id 0193ab33-e7c2-7150-90c1-96ef6009cb62: \u003c?xml version=\"1.0\" encoding=\"UTF-8\"?\u003e\n\u003cError\u003e\u003cCode\u003eNoSuchKey\u003c/Code\u003e\u003cMessage\u003eThe specified key does not exist.\u003c/Message\u003e\u003cKey\u003ed3a081ff-f161-42ea-9a51-0c2aea7c6f5e\u003c/Key\u003e\u003cBucketName\u003es3elma365\u003c/BucketName\u003e\u003cResource\u003e/s3elma365/d3a081ff-f161-42ea-9a51-0c2aea7c6f5e\u003c/Resource\u003e\u003cRequestId\u003e1819060BD323AF39\u003c/RequestId\u003e\u003cHostId\u003e6af47dba-96f6-46b7-9bf5-7dc07f41898c\u003c/HostId\u003e\u003c/Error\u003e: not found"
+        },
+        "web-forms": {
+            "label": "web-forms",
+            "status": "new",
+            "error": ""
+        },
+        "widgets": {
+            "label": "widgets",
+            "status": "new",
+            "error": ""
+        }
+    },
+    "status": "error",
+    "request": null,
+    "result": null,
+    "__createdAt": "2025-01-09T12:29:38.753503277Z",
+    "__createdBy": "722baed9-9015-4cf7-b21a-274199faf38d",
+    "__updatedAt": "2025-01-09T12:29:39.209130582Z",
+    "errorMessage": "rpc error: code = NotFound desc = add doctemplate \"Шаблон счета\" from namespace \"_transactions._outgoing_invoices\" to export: get file body by id 0193ab33-e7c2-7150-90c1-96ef6009cb62: \u003c?xml version=\"1.0\" encoding=\"UTF-8\"?\u003e\n\u003cError\u003e\u003cCode\u003eNoSuchKey\u003c/Code\u003e\u003cMessage\u003eThe specified key does not exist.\u003c/Message\u003e\u003cKey\u003ed3a081ff-f161-42ea-9a51-0c2aea7c6f5e\u003c/Key\u003e\u003cBucketName\u003es3elma365\u003c/BucketName\u003e\u003cResource\u003e/s3elma365/d3a081ff-f161-42ea-9a51-0c2aea7c6f5e\u003c/Resource\u003e\u003cRequestId\u003e1819060BD323AF39\u003c/RequestId\u003e\u003cHostId\u003e6af47dba-96f6-46b7-9bf5-7dc07f41898c\u003c/HostId\u003e\u003c/Error\u003e: not found"
+}
