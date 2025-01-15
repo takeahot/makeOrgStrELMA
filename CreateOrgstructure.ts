@@ -4,47 +4,8 @@
 Документация TS SDK доступна на сайте https://tssdk.elma365.com.
 */
 
-declare const Context: any;
-declare const System: any;
-
-type OrganisationStructureItem = {
-    data: {
-        __id: string;
-        __name: string;
-        department_id_elma?: string;
-        head_person_pos_elma?: string;
-        parent_department_id_1c?: string;
-        department_id_1c?: string;
-    };
-    addChild: (item: OrganisationStructureItem) => void;
-    moveToParent: (parent: OrganisationStructureItem) => void;
-    getParent: () => OrganisationStructureItem | null;
-};
-
-type OrganisationStructureTree = {
-    getRoot: () => OrganisationStructureItem;
-    validate: () => Promise<string[]>;
-};
-
-type BaseApplicationItem<TData, TParams> = {
-    data: TData;
-    save: () => Promise<void>;
-};
-
-type Application$n1c_mdm_debug$orgstructure$Data = {
-    __name: string;
-    department_id_elma?: string;
-    head_person_pos_elma?: string;
-    parent_department_id_1c?: string;
-    department_id_1c?: string;
-};
-
-type Application$n1c_mdm_debug$orgstructure$Params = {};
-
-enum OrganisationStructureItemType {
-    Department = 'DEPARTMENT',
-    Position = 'POSITION',
-}
+// Название: OrgStructure, Код: orgstructure, Тип: Приложение, Подтип: Один (OrgStructure (раздел 1С MDM)), Полнотекстовый поиск: Нет, Сортировка: Нет
+// Название: Organizations, Код: organizations, Тип: Приложение, Подтип: Один (Organizations (раздел 1С MDM)), Полнотекстовый поиск: Нет, Сортировка: Нет
 
 async function CreateOrgStructure(): Promise<void> {
     let orgs = await Context.fields.orgstructure.app.search().where(f => f.__deletedAt.eq(null)).size(1000).all();
@@ -62,7 +23,7 @@ async function CreateChildDepartments(
     tree: OrganisationStructureTree,
     orgs: BaseApplicationItem<Application$n1c_mdm_debug$orgstructure$Data, Application$n1c_mdm_debug$orgstructure$Params>[],
     orgItems: OrganisationStructureItem[]
-): Promise<void>{
+): Promise<void> {
     let childOrgs = orgs.filter(f => (f.data.parent_department_id_1c == parent_department_id_1c));
     for (let child of childOrgs) {
         let item: OrganisationStructureItem | undefined;
