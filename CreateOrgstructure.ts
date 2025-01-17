@@ -8,6 +8,7 @@
 // Название: Organizations, Код: organizations, Тип: Приложение, Подтип: Один (Organizations (раздел 1С MDM)), Полнотекстовый поиск: Нет, Сортировка: Нет
 
 async function CreateOrgStructure(): Promise<void> {
+    // страхуемся на случай если элементов будет больше 1000, но ничего с этим дальше не делаем, просто не упадёт скрипт
     let orgs = await Context.fields.orgstructure.app.search().where(f => f.__deletedAt.eq(null)).size(1000).all();
     let orgItems = await System.organisationStructure.search().where(f => f.__deletedAt.eq(null)).size(1000).all();
 
@@ -24,6 +25,7 @@ async function CreateChildDepartments(
     orgs: BaseApplicationItem<Application$n1c_mdm_debug$orgstructure$Data, Application$n1c_mdm_debug$orgstructure$Params>[],
     orgItems: OrganisationStructureItem[]
 ): Promise<void> {
+    // получаем список дочерних организаций
     let childOrgs = orgs.filter(f => (f.data.parent_department_id_1c == parent_department_id_1c));
     for (let child of childOrgs) {
         let item: OrganisationStructureItem | undefined;
